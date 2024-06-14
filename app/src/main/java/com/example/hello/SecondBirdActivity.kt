@@ -25,6 +25,8 @@ class SecondBirdActivity : AppCompatActivity() {
         Picasso
             .get()
             .load("https://images.unsplash.com/photo-1551085254-e96b210db58a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YmlyZHxlbnwwfHwwfHx8MA%3D%3D")
+            .centerCrop()
+            .resize(500,500)
             .into(binding.bird2)
     }
 }
