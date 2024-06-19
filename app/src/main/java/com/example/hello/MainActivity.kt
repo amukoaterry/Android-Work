@@ -24,8 +24,8 @@ class MainActivity : AppCompatActivity() {
         Picasso
             .get()
             .load("https://images.unsplash.com/photo-1552728089-57bdde30beb3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmlyZHxlbnwwfHwwfHx8MA%3D%3D")
-            .centerCrop()
-            .resize(500,500)
+//            .centerCrop()
+//            .resize(500,500)
             .into(binding.bird1)
     }
 }

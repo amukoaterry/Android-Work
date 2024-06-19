@@ -11,21 +11,27 @@ import com.example.hello.databinding.ActivityFourthBirdBinding
 import com.example.hello.databinding.ActivityThirdBirdBinding
 import com.squareup.picasso.Picasso
 
-class ThirdFourthActivity: AppCompatActivity() {
+class FourthBirdActivity: AppCompatActivity() {
     lateinit var binding: ActivityFourthBirdBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFourthBirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnPrev3.setOnClickListener {
+            finish()
+        }
+
         binding.btnNext4.setOnClickListener {
-            val intent = Intent(this, ThirdFourthActivity::class.java)
+            val intent = Intent(this, FifthBirdActivity::class.java)
             startActivity(intent)
         }
 
         Picasso
             .get()
-            .load("https://images.unsplash.com/photo-1613891188927-14c2774fb8d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+            .load("https://images.unsplash.com/photo-1591608971362-f08b2a75731a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmlyZHN8ZW58MHx8MHx8fDA%3D")
+            .fit()
+//            .resize(500,500)
             .into(binding.bird4)
     }
 }

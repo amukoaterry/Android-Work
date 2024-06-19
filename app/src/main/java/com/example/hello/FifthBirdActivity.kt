@@ -18,9 +18,8 @@ class FifthBirdActivity: AppCompatActivity() {
         binding = ActivityFifthBirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.imageView.setOnClickListener {
-            val intent = Intent(this, FifthBirdActivity::class.java)
-            startActivity(intent)
+        binding.btnPrev4.setOnClickListener {
+            finish()
         }
 
         Picasso
